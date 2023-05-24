@@ -1,0 +1,40 @@
+#inscription{
+    height: 600px;
+    font-size: 35px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+#inscription h3{
+    background-color: cadetblue;
+    padding-top: 5px;
+    font-size: 25px;
+    position: relative;
+    top: 5px;
+    right: 5x;
+    margin-left: 40x;
+    margin-right: 15px;
+}
+#inscription fieldset{
+    height:450px;
+}
+#inscription input{
+    margin-top: 30px;
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+}
+#inscription button{
+    background-color: blue;
+    height: 50px;
+    width: 150px;
+    margin-top: 50px;
+    font-size:25px;
+}
+#inscription button:hover{
+    background-color: red;
+}
+#inscription a{
+    color: blue;
+}
