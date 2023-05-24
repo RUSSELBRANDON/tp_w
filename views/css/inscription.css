@@ -1,6 +1,6 @@
 #inscription{
     height:800px;
-    font-size: 35px;
+    font-size: 30px;
     margin-left: 100px;
     margin-right: 300px;
     margin-top: 50px;
@@ -8,18 +8,23 @@
 }
 
 #inscription fieldset{
-    height:650px;
+    height:600px;
+}
+#inscription label{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #inscription input{
     margin-top: 25px;
     width: 600px;
     height: 30px;
     font-size: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 #inscription h2{
     font-size: 35px;
     height: 50px;
     padding-top: 5px;
+    color: white;
     background-color:blue;
     position: relative;
     top: 5px;
