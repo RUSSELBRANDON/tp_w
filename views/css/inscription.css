@@ -18,7 +18,9 @@
 }
 #inscription h2{
     font-size: 35px;
-    background-color: cadetblue;
+    height: 50px;
+    padding-top: 5px;
+    background-color:blue;
     position: relative;
     top: 5px;
 }
@@ -36,4 +38,7 @@
 }
 #inscription button:hover{
     background-color: red;
+}
+#inscription a{
+    color: blue;
 }
