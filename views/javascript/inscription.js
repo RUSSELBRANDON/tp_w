@@ -3,7 +3,7 @@ const password1 = document.getElementById('password1');
 const password2 = document.getElementById('password2');
 
 
-addEventListener('submit', ()=>{
+form.addEventListener('submit', e=>{
     e.preventDefault();
     verify();
     confirmation();
