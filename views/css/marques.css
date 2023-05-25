@@ -1,0 +1,35 @@
+#slogan{
+    height: 150px;
+    margin-top: 20px;
+    font-size: 25px;
+}
+#slogan p{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: gray;
+}
+#marques{
+    background-color: black;
+    height: 1350px;
+    margin-bottom: 200px;
+}
+article{
+    background-color: blue;
+    width: 600px;
+    height: 600px;
+    margin-right: 25px;
+    margin-left: 25px;
+    float: left;
+    margin-top: 50px;
+}
+#marques a{
+    color:blue;
+    position: relative;
+    top:400px;
+}
+#marques a:hover{
+    background-color: red;
+}
+footer{
+    margin-top: 50px;
+}

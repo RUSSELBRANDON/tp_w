@@ -19,5 +19,4 @@ function connection(){
         throw new PDOException('impossible de se connecter a votre base de donnees\n');
 
 }}
-connection();
 ?>
