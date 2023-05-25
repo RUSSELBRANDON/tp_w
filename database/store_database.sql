@@ -86,8 +86,8 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `nom_users` varchar(20) NOT NULL,
   `email` varchar(12) NOT NULL,
   `mot_de_passe` varchar(12) NOT NULL,
-  `date_enregistrement` int(11) NOT NULL,
-  `num_commande` int(11) NOT NULL,
+  `date_enregistrement` int(11),
+  `num_commande` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id_users`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 

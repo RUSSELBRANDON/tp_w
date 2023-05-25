@@ -38,17 +38,17 @@
     </header>
     <div id="inscription">
     <h2>INSCRIPTION</h2>
-    <form id="form"> 
+    <form id="form" method="post" action="inscription.php"> 
         <fieldset >
             <label for="nom">Nom</label><br>
-           <input type="nom" id="nom" name="nom" placeholder="entrez votre nom " required><br>
+           <input type="nom" id="nom" name="name" placeholder="entrez votre nom " required><br>
             <label for="e-mail">E-mail</label><br>
-           <input type="email" id="e-mail" name="e-mail" placeholder="entrer votre adresse" required ><br>
+           <input type="email" id="e-mail" name="email" placeholder="entrer votre adresse" required ><br>
            <label for="mot passe">Mot de passe</label><br>
-           <input type="password" id="password1" name="mot passe" placeholder="xxxxx" required minlength="5"><br>
+           <input type="password" id="password1" name="password1" placeholder="xxxxx" required minlength="5"><br>
            <small style="font-size: 20px; color: red;"> votre mot de passe doit comporter au moins 5 caracteres</small><br>
            <label for="confirmer mot passe"> confirmer Mot de passe</label><br>
-           <input type="password" id="password2" name="confirmer votre mot passe" placeholder="xxxx" required minlength="5">
+           <input type="password" id="password2" name="password2" placeholder="xxxx" required minlength="5">
            <br><br>
            <button type="submit">s'inscrire </button>    
         </fieldset>

@@ -1,7 +1,7 @@
+
 <?php
 function connection(){
     $_SETTINGS = parse_ini_file('./../settings.ini', true);
-
 
     $db = new \PDO(
         "mysql:hostname={$_SETTINGS['db']['host']};dbname={$_SETTINGS['db']['name']}",
@@ -13,10 +13,12 @@ function connection(){
         ]
     );
 
-    if ($db != null)
+    if ($db != null){
+        echo 'connexion etablie';
         return $db;
-    else
+    }else{
         throw new PDOException('impossible de se connecter a votre base de donnees\n');
-}
 
+}}
+connection();
 ?>
