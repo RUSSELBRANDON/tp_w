@@ -14,7 +14,6 @@ function connection(){
     );
 
     if ($db != null){
-        echo 'connexion etablie';
         return $db;
     }else{
         throw new PDOException('impossible de se connecter a votre base de donnees\n');
