@@ -1,20 +1,22 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.4
--- http://www.phpmyadmin.net
+-- version 4.7.0
+-- https://www.phpmyadmin.net/
 --
--- Client :  127.0.0.1
--- Généré le :  Mer 24 Mai 2023 à 13:51
--- Version du serveur :  5.6.15-log
--- Version de PHP :  5.4.24
+-- Hôte : 127.0.0.1
+-- Généré le :  ven. 26 mai 2023 à 06:02
+-- Version du serveur :  5.7.17
+-- Version de PHP :  5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de données :  `store_database`
@@ -26,13 +28,11 @@ SET time_zone = "+00:00";
 -- Structure de la table `commande`
 --
 
-CREATE TABLE IF NOT EXISTS `commande` (
-  `num_commande` int(11) NOT NULL AUTO_INCREMENT,
-  `date_commande` date NOT NULL,
-  `nbre_articles` int(11) NOT NULL,
-  `total` int(11) NOT NULL,
-  PRIMARY KEY (`num_commande`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+CREATE TABLE `commande` (
+  `num_commande` int(11) NOT NULL,
+  `data_commande` date NOT NULL,
+  `nbre_articles` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -40,13 +40,12 @@ CREATE TABLE IF NOT EXISTS `commande` (
 -- Structure de la table `compte`
 --
 
-CREATE TABLE IF NOT EXISTS `compte` (
-  `id_compte` int(11) NOT NULL AUTO_INCREMENT,
-  `date_creation` date NOT NULL,
+CREATE TABLE `compte` (
+  `id_compte` int(11) NOT NULL,
   `email` varchar(20) NOT NULL,
-  `mot_de_passe` varchar(20) NOT NULL,
-  PRIMARY KEY (`id_compte`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `password` varchar(12) NOT NULL,
+  `date_creation` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -54,11 +53,10 @@ CREATE TABLE IF NOT EXISTS `compte` (
 -- Structure de la table `correspondre`
 --
 
-CREATE TABLE IF NOT EXISTS `correspondre` (
-  `num_commande` int(11) NOT NULL AUTO_INCREMENT,
-  `reference` varchar(12) NOT NULL,
-  PRIMARY KEY (`num_commande`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+CREATE TABLE `correspondre` (
+  `num_commande` int(11) NOT NULL,
+  `id_produit` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -66,13 +64,11 @@ CREATE TABLE IF NOT EXISTS `correspondre` (
 -- Structure de la table `produit`
 --
 
-CREATE TABLE IF NOT EXISTS `produit` (
-  `reference` varchar(12) NOT NULL,
-  `nom_produit` varchar(20) NOT NULL,
-  `prix` int(11) NOT NULL,
-  `description` text NOT NULL,
-  `stock` int(11) NOT NULL,
-  PRIMARY KEY (`reference`)
+CREATE TABLE `produit` (
+  `id_produit` int(11) NOT NULL,
+  `reference` varchar(20) NOT NULL,
+  `name_produit` varchar(20) NOT NULL,
+  `prix` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -81,15 +77,68 @@ CREATE TABLE IF NOT EXISTS `produit` (
 -- Structure de la table `utilisateur`
 --
 
-CREATE TABLE IF NOT EXISTS `utilisateur` (
-  `id_users` int(11) NOT NULL AUTO_INCREMENT,
-  `nom_users` varchar(20) NOT NULL,
-  `email` varchar(12) NOT NULL,
-  `mot_de_passe` varchar(12) NOT NULL,
-  `date_enregistrement` int(11),
-  `num_commande` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id_users`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+CREATE TABLE `utilisateur` (
+  `id_user` int(11) NOT NULL,
+  `name_user` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `password` varchar(12) NOT NULL,
+  `date_enregistrement` date 
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `commande`
+--
+ALTER TABLE `commande`
+  ADD PRIMARY KEY (`num_commande`);
+
+--
+-- Index pour la table `compte`
+--
+ALTER TABLE `compte`
+  ADD PRIMARY KEY (`id_compte`);
+
+--
+-- Index pour la table `produit`
+--
+ALTER TABLE `produit`
+  ADD PRIMARY KEY (`id_produit`);
+
+--
+-- Index pour la table `utilisateur`
+--
+ALTER TABLE `utilisateur`
+  ADD PRIMARY KEY (`id_user`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `password` (`password`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `commande`
+--
+ALTER TABLE `commande`
+  MODIFY `num_commande` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `compte`
+--
+ALTER TABLE `compte`
+  MODIFY `id_compte` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `produit`
+--
+ALTER TABLE `produit`
+  MODIFY `id_produit` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `utilisateur`
+--
+ALTER TABLE `utilisateur`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
