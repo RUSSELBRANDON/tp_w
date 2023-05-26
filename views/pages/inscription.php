@@ -22,7 +22,7 @@ $pass = "";
     $ins->bindParam(':email', $email);
     $ins->bindParam(':password1', $password);
     $ins->bindParam(':dates', $date_enregist );
-    
+
  //Exécution de la requête
 if($ins) 
 {
