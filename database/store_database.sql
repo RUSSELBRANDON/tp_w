@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 26 mai 2023 à 06:02
+-- Généré le :  ven. 26 mai 2023 à 10:43
 -- Version du serveur :  5.7.17
 -- Version de PHP :  5.6.30
 
@@ -68,7 +68,8 @@ CREATE TABLE `produit` (
   `id_produit` int(11) NOT NULL,
   `reference` varchar(20) NOT NULL,
   `name_produit` varchar(20) NOT NULL,
-  `prix` int(11) NOT NULL
+  `prix` int(11) NOT NULL,
+  `image` varchar(30) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -82,8 +83,21 @@ CREATE TABLE `utilisateur` (
   `name_user` varchar(20) NOT NULL,
   `email` varchar(20) NOT NULL,
   `password` varchar(12) NOT NULL,
-  `date_enregistrement` date 
+  `date_enregistrement` date DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`id_user`, `name_user`, `email`, `password`, `date_enregistrement`) VALUES
+(1, 'russel', 'russel@gmail.com', '20056', NULL),
+(2, 'russel', 'russebl@gmail.com', '12345', '2026-05-23'),
+(3, 'user', 'user@gmail.com', '123456', '2026-05-23'),
+(4, 'user', 'user2@gmail.com', 'owoeje', '2026-05-23'),
+(5, 'user22', 'user22@gmail.com', 'owoeje3', '2026-05-23'),
+(6, 'user222', 'user222@gmail.com', 'owoeje31', '2026-05-23'),
+(7, 'user224', 'user224@gmail.com', 'vhbmbn', '2026-05-23');
 
 --
 -- Index pour les tables déchargées
@@ -138,7 +152,7 @@ ALTER TABLE `produit`
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
