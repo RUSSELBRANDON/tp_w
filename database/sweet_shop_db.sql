@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 26 mai 2023 à 10:43
+-- Généré le :  ven. 26 mai 2023 à 15:47
 -- Version du serveur :  5.7.17
 -- Version de PHP :  5.6.30
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `store_database`
+-- Base de données :  `sweet_shop_db`
 --
 
 -- --------------------------------------------------------
@@ -72,6 +72,21 @@ CREATE TABLE `produit` (
   `image` varchar(30) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- Déchargement des données de la table `produit`
+--
+
+INSERT INTO `produit` (`id_produit`, `reference`, `name_produit`, `prix`, `image`) VALUES
+(1, 'le coq sportif', 'authentique', 20000, 'authentique'),
+(2, 'puma', 'suede-classic-xxi-v-', 15000, 'suede-classic-xxi-v-'),
+(3, 'timberland', 'sprint-trekker', 10000, 'sprint-trekker'),
+(4, 'reebook', 'classic-flag_007', 12000, 'classic-flag_007'),
+(5, 'timberland', 'partner-creation-ref', 8000, 'partner-creation-ref'),
+(6, 'timberland', 'sprint-trekker', 10000, 'sprint-trekker'),
+(7, 'reebook', 'classic-flag_007', 12000, 'classic-flag_007'),
+(8, 'timberland', 'partner-creation-ref', 8000, 'partner-creation-ref'),
+(9, 'reebook', 'classic-royal-flag_0', 12000, 'classic-royal-flag_004');
+
 -- --------------------------------------------------------
 
 --
@@ -85,19 +100,6 @@ CREATE TABLE `utilisateur` (
   `password` varchar(12) NOT NULL,
   `date_enregistrement` date DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `utilisateur`
---
-
-INSERT INTO `utilisateur` (`id_user`, `name_user`, `email`, `password`, `date_enregistrement`) VALUES
-(1, 'russel', 'russel@gmail.com', '20056', NULL),
-(2, 'russel', 'russebl@gmail.com', '12345', '2026-05-23'),
-(3, 'user', 'user@gmail.com', '123456', '2026-05-23'),
-(4, 'user', 'user2@gmail.com', 'owoeje', '2026-05-23'),
-(5, 'user22', 'user22@gmail.com', 'owoeje3', '2026-05-23'),
-(6, 'user222', 'user222@gmail.com', 'owoeje31', '2026-05-23'),
-(7, 'user224', 'user224@gmail.com', 'vhbmbn', '2026-05-23');
 
 --
 -- Index pour les tables déchargées
@@ -147,7 +149,7 @@ ALTER TABLE `compte`
 -- AUTO_INCREMENT pour la table `produit`
 --
 ALTER TABLE `produit`
-  MODIFY `id_produit` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_produit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
