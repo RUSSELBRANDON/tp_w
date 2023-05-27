@@ -1,0 +1,51 @@
+.dropdown:hover>{
+    display: block;
+}
+.fiel1{
+    background: url(./img/shoes.jpg)no-repeat;
+    height: 450px;
+    background-size: cover;
+    
+}
+#partie1{
+    color: rgb(28, 28, 36);
+    border: darkslateblue;
+    font-size: 60px;
+    font-weight: bold;
+
+}
+table{
+    width: 1000px;
+    height: 150px;
+    border: black;
+    background-color: azure;
+}
+.fiel3{
+    float: right;
+    width: 700px;
+    height: 400px;
+    background-color: khaki;
+    margin-right: 100px;
+}
+.fiel2{
+    float: left;
+    width: 350px;
+    height: 400px;
+    background-color: khaki;
+}
+#promo{
+    text-align: center;
+    background-color: plum;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    width: 350px;
+}
+body{
+    background-color: wheat;
+    
+}
+.fiel4{
+    background-color: black;
+    width: 2000px;
+    height: 300px;
+}

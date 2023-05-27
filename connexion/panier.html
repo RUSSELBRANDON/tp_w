@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANIER</title>
+    <link rel="stylesheet" href="ACHAT.css">
+</head>
+<body >
+
+    <fieldset class="fiel1">
+       <center> <legend id="partie1">VOTRE PANIER</legend></center> 
+       <p>Shopping On Line</p>
+       <p id="promo">Beneficiez de plus de 30% de reduction
+            en effectuant des achats <br>
+           de plus de 50000 fr
+       </p>
+
+    </fieldset>
+    <center><p>Votre panier d'achats</p><hr><br></center>
+    <ul>
+        <li><a href="index.html"></a><h2>panier</h2></li>
+    </ul>
+
+    <fieldset style="width: 1400px; height: 100px;">  
+    
+      <label for="q">Quantite:</label>
+       <select id="qt" name="q">
+             <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select><br>
+      <button type="button" class="add-to-cart" data-id="432" data-name="chaussures" data-price="8000" style="background-color:midnightblue;">
+        <h4>Ajouter Au Panier</h4></button>
+    </fieldset><br>
+    <div class="dropdown">
+        <div id="cart">
+            <p><span id="in-cart-items-num">0</span>Articles</p>
+        </div>
+        <ul id="cart-dropdown" hidden>
+            <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
+            <li class="go-to-cart hidden"><a href="./panier.html">Voir le panier</a></li>
+        </ul>
+
+    </div>
+    
+    <fieldset class="fiel2">
+        <a href="conseil .html" style="color: blue;"><h2>Un Conseil ?</h2></a>
+       <a href="aide.html" style="color: blue;"> <h2>Besoin d'aide ?</h2> </a>
+     <P style="color: green ;font-size: 30px;"><img src="./img/tel.jpg" alt="hellas" 
+        style="width: 50px; height: 50px;">690 26 56 28 <span style="font-size: 20px;
+        color: black;">contacter nous</span>  
+    </fieldset>
+    <fieldset class="fiel3">
+        <h2>Choisissez votre livraison</h2>
+        <b style="color: chocolate;">Directement chez moi</b><input type="radio" name="domicile">
+        <b style="color: chocolate;">Via une Agence</b><input type="radio" name="agence">
+        
+
+    </fieldset><br>
+    <fieldset class="fiel4">
+        <img src="./connect.jpg" alt="impossible">
+    </fieldset>
+    <script src="panier.js"></script>
+</body>
+</html>
