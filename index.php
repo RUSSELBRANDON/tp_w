@@ -1,79 +1,57 @@
+<?php 
+    $_APP = parse_ini_file('settings.ini');
+    // var_dump($_APP);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../css/styles.css">
+    <link rel="stylesheet" href="views/css/styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title><?php echo($_APP['name']) ?></title>
 </head>
 <body>
-    <header>
-        <div id="entete1">
-        <h1>SWEET SHOP</h1>
-        <h5> faites vous plaisir chez nous</h5><br>
-        <form method="post" action="./../../database/getshoes.php">
-            <input type="text" placeholder="rechercher un produit" name="search">
-            <button type="submit">rechercher</button>
-        </form>
-        <nav>
-            <ul>
-               <li> <a href="connexion.html"> COMPTE</a></li>
-               <b class="far fa-user"></b>
-                <li style="font-size: 22px;"> PANIER</li>
-            </ul>
-        </nav>
-    </div>
-    <div id="entete2">
-        <nav>
-            <ul>
-                <li> <a href="hommes.html"> HOMMES</a></li>
-                <li> <a href="femmes.html"> FEMMES</a></li>
-                <li> <a href="enfants.html"> ENFANTS</a></li>
-                <li> <a href="marques.html"> MARQUES</a></li>
-            </ul>
-        </nav>
-    </div>
-    </header>
-    <img width="99%" height="30%" src="./../ressources/images/main.jpg" alt="failed to load image" >
+    <?php require_once('./views/pages/parts/footer.php') ?>
+    <img width="99%" height="30%" src="views/ressources/images/main.jpg" alt="failed to load image" >
     <div id="offres">
          <hr>
          <h3> BON PLANS DU MOMENTS </h3>
          <hr>
-         <article style="background-image: url(./../ressources/images/authentic.webp); background-size: 400px;">
+         <article style="background-image: url(views/ressources/images/authentic.webp); background-size: 400px;">
             <h6> LE COQ SPORTIF </h6>
             <small> authentique </small>
         </article>
-        <article style="background-image: url(./../ressources/images/bakam.webp); background-size: 400px;">
+        <article style="background-image: url(views/ressources/images/bakam.webp); background-size: 400px;">
             <h6>REEBOOK</h6>
             <small> classic-flag_003</small>
         </article>
-        <article style="background-image: url(./../ressources/images/classic-kids_006.jpg);">
+        <article style="background-image: url(views/ressources/images/classic-kids_006.jpg);">
             <h6>REEBOOK</h6>
             <small> classic-kids_006</small>
         </article> 
-        <article style="background:url(./../ressources/images/suede-classic-xxi-v-.webp); background-size: 400px;">
+        <article style="background:url(views/ressources/images/suede-classic-xxi-v-.webp); background-size: 400px;">
             <h6> PUMA </h6>
             <small> suede-classic-xxi-v-</small>
         </article>
-        <article style="background:url(./../ressources/images/baylora.webp); background-size: 400px;">
+        <article style="background:url(views/ressources/images/baylora.webp); background-size: 400px;">
             <h6> REEBOOK </h6>
             <small> classic-royal-flag_004</small>
         </article>
-        <article style="background:url(./../ressources/images/royal-flag.jpg);">
+        <article style="background:url(views/ressources/images/royal-flag.jpg);">
             <h6> REEBOOK </h6>
             <small> classic-flag_007</small>
         </article>
-        <article style="background-image: url(./../ressources/images/partner-creation-ref-fm8alulea10-black.webp); background-size: 400px;">
+        <article style="background-image: url(views/ressources/images/partner-creation-ref-fm8alulea10-black.webp); background-size: 400px;">
             <h6> TIMBERLAND </h6>
             <small> partner-creation-ref-fm8alulea10-black </small>
         </article>
-        <article style="background-image: url(./../ressources/images/sprint-trekker.webp); background-size: 400px;">
+        <article style="background-image: url(views/ressources/images/sprint-trekker.webp); background-size: 400px;">
             <h6> TIMBERLAND </h6>
             <small> sprint-trekker</small>
         </article>
-        <article style="background-image: url(./../ressources/images/blim.webp); background-size: 400px;">
+        <article style="background-image: url(views/ressources/images/blim.webp); background-size: 400px;">
             <h6> REEBOOK </h6>
             <small> classic-royal-flag_004</small>
         </article>
@@ -88,7 +66,7 @@
     </div>
     <div id="service">
         <div id="message">
-            <img width="22%" height="22%" src="./../ressources/images/casque.svg" alt="casque">
+            <img width="22%" height="22%" src="views/ressources/images/casque.svg" alt="casque">
             <p> contacter nous par telephone ou par email et acceder a un<strong> SERVICE CLIENT </strong>de qualite</p>
         </div>
         <div id="numero">
@@ -101,19 +79,19 @@
     </div>
     <div id="icone">
         <div id="icone1">
-           <img src="./../ressources/images/icone1.png" alt="icone1">
+           <img src="views/ressources/images/icone1.png" alt="icone1">
            <small> echange sous 100 jours</small>
         </div>
         <div id="icone2">
-            <img src="./../ressources/images/icone2.png" alt="icone1">
+            <img src="views/ressources/images/icone2.png" alt="icone1">
             <small> livraison gratuite a plus de 10000fcfa</small>
         </div>
         <div id="icone3">
-            <img src="./../ressources/images/icone3.png" alt="icone1">
+            <img src="views/ressources/images/icone3.png" alt="icone1">
             <small> paiement securise</small>
         </div>
         <div id="icone4">
-            <img src="./../ressources/images/icone1.png" alt="icone1">
+            <img src="views/ressources/images/icone1.png" alt="icone1">
             <small> expedition sous 24h</small>
         </div>
     </div>
@@ -122,7 +100,7 @@
             <h3>moyen de paiement</h3>
             <p> a chercher</p>
             <h3> moyen de livraison</h3>
-            <img width="50%" height="50%" src="./../ressources/images/Logo-Colis.svg" alt="logo colis">
+            <img width="50%" height="50%" src="views/ressources/images/Logo-Colis.svg" alt="logo colis">
         </div>
         <div id="info">
         <div id="site">
@@ -147,9 +125,6 @@
         </div>
         </div>
     </div>
-    <footer>
-        <h1>  SWEET SHOP</h1>
-        <h4> Copyright © 2016. Tous droits réservés.</h4>
-    </footer>
+    <?php require_once('./views/pages/parts/footer.php') ?>
 </body>
 </html>
