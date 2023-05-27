@@ -23,4 +23,8 @@ if($rech==="TIMBERLAND" || $rech==="TIMBERLAND"){
 }else{
     ?> <h3 style="font-size:40px;color:black"> articles introuvable!!! verifier le nom et recommencer <?php
 }
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 39685140ffd8622c2cdee3f9a6f5eff01b965c56
