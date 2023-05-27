@@ -1,6 +1,11 @@
 <?php 
     $_APP = parse_ini_file('settings.ini');
+    require_once('database/connection.php');
+    require_once('database/GetProducts.php');
     // var_dump($_APP);
+
+    $db = connection('settings.ini');
+    $produits = getAllShoes($db);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,42 +24,17 @@
          <hr>
          <h3> BON PLANS DU MOMENTS </h3>
          <hr>
-         <article style="background-image: url(views/ressources/images/authentic.webp); background-size: 400px;">
-            <h6> LE COQ SPORTIF </h6>
-            <small> authentique </small>
+         <?php
+            foreach ($produits as $key => $produit) {
+         ?>
+        <article >
+            <img width="400px" height="400px" src="http://localhost/tp_w/views/ressources/images/<?php echo($produit['image']) ?>" alt="">
+            <h6> <?php echo($produit['nom']) ?> </h6>
+            <small> <?php echo($produit['prix']) ?> </small>
         </article>
-        <article style="background-image: url(views/ressources/images/bakam.webp); background-size: 400px;">
-            <h6>REEBOOK</h6>
-            <small> classic-flag_003</small>
-        </article>
-        <article style="background-image: url(views/ressources/images/classic-kids_006.jpg);">
-            <h6>REEBOOK</h6>
-            <small> classic-kids_006</small>
-        </article> 
-        <article style="background:url(views/ressources/images/suede-classic-xxi-v-.webp); background-size: 400px;">
-            <h6> PUMA </h6>
-            <small> suede-classic-xxi-v-</small>
-        </article>
-        <article style="background:url(views/ressources/images/baylora.webp); background-size: 400px;">
-            <h6> REEBOOK </h6>
-            <small> classic-royal-flag_004</small>
-        </article>
-        <article style="background:url(views/ressources/images/royal-flag.jpg);">
-            <h6> REEBOOK </h6>
-            <small> classic-flag_007</small>
-        </article>
-        <article style="background-image: url(views/ressources/images/partner-creation-ref-fm8alulea10-black.webp); background-size: 400px;">
-            <h6> TIMBERLAND </h6>
-            <small> partner-creation-ref-fm8alulea10-black </small>
-        </article>
-        <article style="background-image: url(views/ressources/images/sprint-trekker.webp); background-size: 400px;">
-            <h6> TIMBERLAND </h6>
-            <small> sprint-trekker</small>
-        </article>
-        <article style="background-image: url(views/ressources/images/blim.webp); background-size: 400px;">
-            <h6> REEBOOK </h6>
-            <small> classic-royal-flag_004</small>
-        </article>
+        <?php
+            }
+         ?>
     </div>
     <div id="abonnement">
         <h3> ABONNEZ-VOUS</h3>
