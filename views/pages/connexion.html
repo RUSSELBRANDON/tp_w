@@ -38,12 +38,12 @@
     </header>
           <div id="inscription">
             <h3> CONNECTER VOUS A VOTRE COMPTE</h3>
-            <form>
+            <form  method="post" action="connexion.php">
                 <fieldset>
                 <p> <label for="e-mail">E-mail</label></p>
-                <p><input type="email" id="e-mail" name="e-mail" placeholder="entrer votre adresse" required ></p>
+                <p><input type="email" id="e-mail" name="email" placeholder="entrer votre adresse" required ></p>
                 <p><label for="mot passe">Mot de passe</label></p>
-                <input type="password" id="mot passe" name="mot passe" placeholder="xxxxx"required minlength="5"><br>
+                <input type="password" id="mot passe" name="mot_de_passe" placeholder="xxxxx"required minlength="5"><br>
                 <small style="font-size:20px ; color: red;"> votre mot de passe doit comporter au moins 5 caracteres</small><br>
                 <a href="oubliepassword.html"> Mot de passe oublie? </a><br>
                 <button type="submit" id="connexion"> CONNEXION </button>   
