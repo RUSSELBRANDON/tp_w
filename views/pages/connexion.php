@@ -12,13 +12,8 @@ $mail = $pdo->prepare("SELECT email FROM utilisateur WHERE email=?");
 $mail->execute(["$email"]);
 $password = $pdo->prepare("SELECT mot_de_passe FROM utilisateur WHERE mot_de_passe=?");
 $password->execute(["$pass"]);
-if($mail===null && $password===null){
-    echo " compte inexistant";
-}else if($mail===null){
-    echo " l'email entree ne correspond pas";
-}elseif( $password===null){
-    echo " le mot de passe entree ne correspond pas";
-}else{
+if($mail!==null && $password!==null){
     echo " bienvenu ";
+}else{
+    echo "ce compte n'existe pas";
 }
-?>
