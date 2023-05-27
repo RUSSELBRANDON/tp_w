@@ -1,7 +1,7 @@
 
 <?php
-function connection(){
-    $_SETTINGS = parse_ini_file('./../../settings.ini', true);
+function connection($link){
+    $_SETTINGS = parse_ini_file($link, true);
 
     $db = new \PDO(
         "mysql:hostname={$_SETTINGS['db']['host']};dbname={$_SETTINGS['db']['name']}",

@@ -1,3 +1,7 @@
+<?php 
+    $_APP = parse_ini_file('./../../settings.ini');
+    // var_dump($_APP);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,36 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/styles.css">
-    <title>Document</title>
+    <title><?php echo($_APP['name']) ?></title>
 </head>
 <body>
-    <header>
-        <div id="entete1">
-        <h1> SWEET SHOP </h1>
-        <h5> faites vous plaisir chez nous</h5><br>
-        <form>
-            <input type="text" placeholder="rechercher un produit" name="search">
-            <button type="submit">rechercher</button>
-        </form>
-        <nav>
-            <ul>
-               <li> <a href="connexion.html"> COMPTE</a></li>
-               <b class="far fa-user"></b>
-                <li style="font-size: 22px;"> PANIER</li>
-            </ul>
-        </nav>
-    </div>
-    <div id="entete2">
-        <nav>
-            <ul>
-                <li> <a href="hommes.html"> HOMMES</a></li>
-                <li> <a href="femmes.html"> FEMMES</a></li>
-                <li> <a href="enfants.html"> ENFANTS</a></li>
-                <li> <a href="marques.html"> MARQUES</a></li>
-            </ul>
-        </nav>
-    </div>
-    </header>
+    <?php require_once('parts/nav.php') ?>
    
     <div id="service">
         <div id="message">
@@ -66,11 +44,7 @@
             <img src="./../ressources/images/icone1.png" alt="icone1">
             <small> expedition sous 24h</small>
         </div>
-        </div>
-    <footer>
-        <h1> CHAUSSURE </h1>
-        <h4> Copyright © 2016. Tous droits réservés.</h4>
-    </footer>
-    
+    </div>
+    <?php require_once('parts/footer.php') ?>    
 </body>
 </html>
