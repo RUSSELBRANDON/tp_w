@@ -28,7 +28,7 @@
             foreach ($produits as $key => $produit) {
          ?>
         <article >
-            <img style="width:400px;height:400px;" src="http://localhost/tp_w/views/ressources/images/<?php echo($produit['image']) ?>" alt="">
+            <img width="400px" height="400px" src="http://localhost/tp_w/views/ressources/images/<?php echo($produit['image']) ?>" alt="">
             <h6> <?php echo($produit['nom']) ?> </h6>
             <small> <?php echo($produit['prix']) ?> </small>
         </article>
