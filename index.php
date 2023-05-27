@@ -13,7 +13,7 @@
     <title><?php echo($_APP['name']) ?></title>
 </head>
 <body>
-    <?php require_once('./views/pages/parts/footer.php') ?>
+    <?php require_once('./views/pages/parts/nav.php') ?>
     <img width="99%" height="30%" src="views/ressources/images/main.jpg" alt="failed to load image" >
     <div id="offres">
          <hr>
